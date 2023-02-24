@@ -92,7 +92,7 @@ else
 firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent, msg,'Blue')
 end
 ------------------------------------
-
+end
 
 -- Run the created entity
 Spawner.runEntity(entityTable)
