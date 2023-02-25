@@ -24,7 +24,6 @@ while true and enableDamage do
 	local _,found=workspace.CurrentCamera:WorldToScreenPoint(eyes.Position)
 	if found then
 		hum.Health-=6
-		eyes.PlaybackSpeed = 0.75
 		eyes.Attack:Play()
 		if hum.Health<=0 then
 			game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Eyes"
