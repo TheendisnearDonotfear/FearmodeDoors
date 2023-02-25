@@ -21,6 +21,7 @@ eyes.Attachment.Eyes.Enabled=true
  
 local hum=game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
 while true and enableDamage do
+if not game.Workspace:FindFirstChild("Eyes") then break end
 	local _,found=workspace.CurrentCamera:WorldToScreenPoint(eyes.Position)
 	if found then
 		hum.Health-=6
