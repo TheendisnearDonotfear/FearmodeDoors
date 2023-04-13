@@ -5,10 +5,11 @@ local currentLoadedRoom=workspace.CurrentRooms[game:GetService("ReplicatedStorag
 local eyes=game:GetObjects("rbxassetid://11388969546")[1]
  
 if eyes then end
-game.Workspace.CurrentRooms.ChildAdded:Connect(function()
+coroutine.wrap(function()
+game:GetService("ReplicatedStorage").GameData.LatestRoom.Value.Changed:Wait()
     game.Workspace:FindFirstChild("Eyes"):Destroy()
     enableDamage = true
-end)
+end)()
 local num=math.floor(#currentLoadedRoom.Nodes:GetChildren()/2)
 eyes.CFrame=(
 	num==0 and currentLoadedRoom.Base or currentLoadedRoom.Nodes[num]
